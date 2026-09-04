@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo do Futebol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="tema-claro">
+
+    <div>
+        <h1>Paixão pelo Futebol</h1>
+        <p>O futebol é o esporte mais popular do mundo, unindo bilhões de torcedores em torno da mesma emoção.</p>
+        
+        <button id="btn-tema">Alternar Tema Escuro</button>
+    </div>
+
+    <div>
+        <h2>Grandes Competições</h2>
+        <ul>
+            <li>Copa do Mundo FIFA</li>
+            <li>Liga dos Campeões da UEFA</li>
+            <li>Copa Libertadores da América</li>
+        </ul>
+        <a href="https://www.fifa.com" target="_blank">Visite o site oficial da FIFA</a>
+    </div>
+
+    <div>
+        <h2>Galeria e Interação</h2>
+        <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=500&q=80" alt="Bola de futebol no gramado">
+        <br>
+        <button id="btn-curtir">Curtir ⚽ (<span id="contador">0</span>)</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Regras de Temas */
+body.tema-claro {
+    background-color: #f4f4f4;
+    color: #222222;
+}
+
+body.tema-escuro {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Estilização dos blocos e elementos */
+div {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.tema-escuro div {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #2e7d32;
+    color: white;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+a {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+body.tema-escuro a {
+    color: #81c784;
+}
+// Funcionalidade do Contador de Curtidas
+let curtidas = 0;
+const btnCurtir = document.getElementById('btn-curtir');
+const contadorDisplay = document.getElementById('contador');
+
+btnCurtir.addEventListener('click', () => {
+    curtidas++;
+    contadorDisplay.textContent = curtidas;
+});
+
+// Funcionalidade de Alternar Tema (Claro/Escuro)
+const btnTema = document.getElementById('btn-tema');
+const body = document.body;
+
+btnTema.addEventListener('click', () => {
+    body.classList.toggle('tema-escuro');
+    body.classList.toggle('tema-claro');
+
+    if (body.classList.contains('tema-escuro')) {
+        btnTema.textContent = 'Alternar Tema Claro';
+    } else {
+        btnTema.textContent = 'Alternar Tema Escuro';
+    }
+});
