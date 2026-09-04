@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site Interativo</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo do Futebol - Notícias e Estatísticas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">MeuSite</div>
-        <button id="theme-toggle" class="btn-theme">🌙 Modo Escuro</button>
-    </header>
-
-    <main class="container">
-        <section class="hero">
-            <h1>Bem-vindo ao Meu Site</h1>
-            <p>Este é um modelo estilizado com HTML, CSS e JavaScript funcional.</p>
-            <div class="hero-buttons">
-                <button class="btn primary" onclick="mostrarAlerta('Você clicou no Botão Principal!')">Começar</button>
-                <button class="btn secondary" onclick="mostrarAlerta('Você clicou em Saiba Mais!')">Saiba Mais</button>
-            </div>
-        </section>
-
-        <section class="gallery">
-            <h2>Galeria Interativa</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <img src="https://picsum.photos/400/250?random=1" alt="Imagem de Exemplo 1">
-                    <div class="card-content">
-                        <h3>Projeto Alfa</h3>
-                        <p>Descrição breve do primeiro card de exemplo da galeria.</p>
-                        <button class="btn card-btn" onclick="contarClique(this)">Curtir (<span class="count">0</span>)</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://
+  <header class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-futbol"></i> <span>MundoFutebol</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#noticias">Notícias</a></li>
+        <li><a href="#jogos">Próximos Jogos</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button id="theme-toggle" class="btn-theme" title="Alternar Tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </header>
