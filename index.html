@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo do Futebol</title>
+    <title>Meu Site Interativo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Paixão pelo Futebol</h1>
-        
-        <p>O futebol é o esporte mais popular do mundo, unindo bilhões de torcedores em torno da emoção de um gol.</p>
-        
-        <div class="card">
-            <p>Principais Fundamentos do Jogo:</p>
-            <ul>
-                <li>Passe e Controle de Bola</li>
-                <li>Dribles e Habilidade</li>
-                <li>Finalização ao Gol</li>
-                <li>Estratégia e Trabalho em Equipe</li>
-            </ul>
-        </div>
 
-        <p>Quer saber mais sobre a história do esporte?</p>
-        <a href="https://pt.wikipedia.org/wiki/Futebol" target="_blank" class="btn">Leia mais na Wikipédia</a>
-        
-        <button id="btnInterativo" class="btn-acao">Clique
+    <header>
+        <div class="logo">MeuSite</div>
+        <button id="theme-toggle" class="btn-theme">🌙 Modo Escuro</button>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Bem-vindo ao Meu Site</h1>
+            <p>Este é um modelo estilizado com HTML, CSS e JavaScript funcional.</p>
+            <div class="hero-buttons">
+                <button class="btn primary" onclick="mostrarAlerta('Você clicou no Botão Principal!')">Começar</button>
+                <button class="btn secondary" onclick="mostrarAlerta('Você clicou em Saiba Mais!')">Saiba Mais</button>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Galeria Interativa</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="https://picsum.photos/400/250?random=1" alt="Imagem de Exemplo 1">
+                    <div class="card-content">
+                        <h3>Projeto Alfa</h3>
+                        <p>Descrição breve do primeiro card de exemplo da galeria.</p>
+                        <button class="btn card-btn" onclick="contarClique(this)">Curtir (<span class="count">0</span>)</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://
